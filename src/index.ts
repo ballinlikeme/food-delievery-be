@@ -1,7 +1,10 @@
 import express from "express";
 import { router } from "./routes";
+import { telegramService } from "./services/telegram.service";
 
 const app = express();
+
+telegramService.init();
 
 app.use(router);
 
