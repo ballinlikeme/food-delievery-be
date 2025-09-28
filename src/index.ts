@@ -6,6 +6,7 @@ const app = express();
 
 telegramService.init();
 
+app.use(express.json());
 app.use(router);
 
 app.listen(3000, () => {
