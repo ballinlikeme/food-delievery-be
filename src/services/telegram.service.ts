@@ -10,27 +10,21 @@ export class TelegramService {
         console.log("Telegram service is live");
     }
 
-    public async init() {
-        this.bot.on("message", async (message) => {
-            const chatId = message.chat.id;
-
-            this.bot.sendMessage(chatId, "ChatId: " + chatId);
-        });
-    }
+    public async init() {}
 
     public async sendRequestNotification(
         items: { id: number; name: string; description: string }[],
     ) {
-        const chatId = 747171859;
+        const chatId = 1215090528;
         // const chatId = 1215090528;
         this.bot.sendMessage(
             chatId,
             "Запросик на покушать от твоего любимого:\n" +
                 items
-                    .map((i) => `${i.id}. ${i.name} - ${i.description}`)
+                    .map((i, idx) => `${idx + 1}. ${i.name} - ${i.description}`)
                     .join("\n"),
         );
     }
 }
-// 1215090528
+
 export const telegramService = new TelegramService();
