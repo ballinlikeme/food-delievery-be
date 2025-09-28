@@ -12,9 +12,11 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "@netlify/functions": "^4.2.6",
         "config": "^4.1.1",
         "express": "^5.1.0",
-        "node-telegram-bot-api": "^0.66.0"
+        "node-telegram-bot-api": "^0.66.0",
+        "serverless-http": "^4.0.0"
     },
     "devDependencies": {
         "@types/config": "^3.3.5",
