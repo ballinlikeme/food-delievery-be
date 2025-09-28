@@ -7,7 +7,7 @@ export class RequestsController {
     }
 
     public async handler(req: Request, res: Response) {
-        await telegramService.sendRequestNotification(req.body);
+        await telegramService.sendRequestNotification(req.body.data);
         res.status(200).json({ status: "success" });
     }
 }
